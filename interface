@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Interface
+
+{
+    interface Interface1
+    {
+        void Add(int a, int b);
+    }
+    interface Interface2 : Interface1
+    {
+        void Sub(int a, int b);
+    }
+    class ClassA : Interface2
+    {
+        public void Add(int a, int b)
+        {
+            Console.WriteLine(a + b);
+        }
+        public void Sub(int a, int b)
+        {
+            Console.WriteLine(a - b);
+        }
+        static void Main()
+
+        ClassA a = new ClassA();
+
+        a.Add(15,2);
+            a.Sub(19,2);
+            Console.ReadLine();
+           
+        
+    }
+}
+-----------------
