@@ -1,0 +1,40 @@
+using System;
+class program {
+  static void Main() {
+    int totalcost =0;
+    start:
+    Console.WriteLine("1-small,2-medium,3-large");
+    int userchoise = int.parse(Console.ReadLine());
+    
+    switch(userchoise)
+    {
+        case 1:
+        totalcost +=1;
+        break;
+        case 2:
+        totalcost +=2;
+        break;
+        case 3:
+        totalcost +=3;
+        break;
+        default:
+        Console.WriteLine("your choice{0} is invalid",userchoise);
+        goto start;
+	}
+	Decide:
+	Console.Writeline("Do you want to buy another coffe yes or No");
+	string userDecision = console.ReadLine();
+	switch(userDecision. toupper())
+	{
+	    case "yes":
+	    goto start;
+	    case "No":
+	    break;
+	    default:
+	    Console.writeline("your choice {0}is invalid. try again..",userDecision);
+	    goto Decide;
+	}
+        Console.WriteLine("thank you for shooping here welocome:");
+        Console.WriteLine("Bill Amount ={0}", totalcost);
+  }
+}
