@@ -36,4 +36,53 @@ namespace Interface
         
     }
 }
------------------
+      <<<<<<---------------------------------------------------------------------------------------------------->>>>>>>
+      using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace interface2
+{
+    interface Interface2
+    {
+        void Test();
+        void Show();
+    }
+    interface Interface3
+    {
+        void Show();
+        void Test();
+
+    }
+    class MultipleInheritance:Interface2, Interface3
+    {
+        public void Test()
+        {
+            Console.WriteLine("interface method");
+        }
+
+        public void Show()
+        {
+            Console.WriteLine("this is a show method in interface2");
+        }
+
+        public void Show()
+        {
+            Console.WriteLine("this is show in interface3");
+        }
+
+        static void Main()
+        {
+            MultipleInheritance obj = new MultipleInheritance();
+            obj.Test();
+            Interface2 i2 = obj;
+            i2.Show();
+            Interface3 i3  = obj;
+            i3.Show();
+            Console.ReadLine();
+        
+        }
+    }
+}
