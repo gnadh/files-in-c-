@@ -1,0 +1,61 @@
+using System;
+using System.Collections.Generic;   
+namespace Collections
+{
+    public class Customer
+    {
+        public int custid { get; set; }
+        public string name { get; set; }    
+        public string city { get; set; }    
+        public double balance { get; set; } 
+    }
+    class TestCustomer
+    {
+        static void Main()
+            List<Customer> Customers = new List<Customer>();
+
+        Customer c1 = new Customer { custid = 1, name = "gopinadh", city = "vijayawada", balance = 123556 };
+        Customer c2 = new Customer { custid = 2, name = "nadh", city = "hyd", balance = 44556 };
+        Customer c3 = new Customer { custid = 3, name = "gopi", city = "vijaya", balance = 993556 };
+        Customers.Add(c1); Customers.Add(c2);Customers.Add(c3);
+            foreach(Customer obj in Customers)
+            {
+            Console.WriteLine(obj.custid+" "+obj.name+" "+obj.city+" "+obj.balance);
+            }
+            }
+            
+            
+            
+            <<<<<<------------------------------------------------------------------------->>>>>>
+            
+            
+using System;
+using System.Collections.Generic;
+using System.Collections;
+using Collections;
+
+namespace Collections
+{
+    public class Student
+    {
+        public int Sid { get; set; }
+        public string Name { get; set; }
+        public int Class { get; set; }
+        public float Marks { get; set; }
+
+    }
+}
+public class TestStudent
+{
+    static void Main()
+    {
+        Student s1 = new Student { Sid = 110, Name = "gopinadh", Class = 90, Marks = 22.33f };
+        Student s2 = new Student { Sid = 10, Name = "nadh", Class = 20, Marks = 62.33f };
+        Student s3 = new Student { Sid = 11, Name = "gopi", Class = 10, Marks = 92.33f };
+        List<Student> Students = new List<Student>() { s1, s2, s3 };
+        foreach (Student S in Students)
+        {
+            Console.WriteLine(S.Sid + " " + S.Name + " " + S.Class + " " + S.Marks);
+        }
+    }
+}
