@@ -1,0 +1,64 @@
+using System;
+class program
+{
+    public static void Main()
+    {
+        projectA.TeamA.ClassA.print();
+        projectA.TeamB.ClassA.print();
+
+    }
+}
+namespace projectA
+{
+    namespace TeamA
+    {
+        class ClassA
+        {
+            public static void print()
+            {
+                Console.WriteLine("Team A print");
+                int userno = int.Parse(Console.ReadLine());
+                switch(userno)
+                {
+                    case 10:
+                        Console.WriteLine("your no is 10");
+                        break;
+                        case 20:
+                        Console.WriteLine("Your no is 20");
+                        break;
+                        default:
+                        Console.WriteLine("this is not your no");
+                        break;
+                }
+
+            }
+        }
+    }
+}
+namespace projectA
+{
+    namespace TeamB
+    {
+        class ClassA
+        {
+            public static void print()
+            {
+                Console.WriteLine("Team B print");
+               
+                int userno = int.Parse(Console.ReadLine());
+                switch (userno)
+                {
+                    case 40:
+                        Console.WriteLine("your no is 40");
+                        break;
+                    case 30:
+                        Console.WriteLine("Your no is 30");
+                        break;
+                    default:
+                        Console.WriteLine("this is not your no");
+                        break;
+                }
+            }
+        }
+    }
+}
