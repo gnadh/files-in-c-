@@ -1,0 +1,55 @@
+using System;
+using System.Collections;
+ namespace collections
+{
+    class HashCollections
+    {
+        static void Main()
+        {
+            Hashtable ht = new Hashtable();
+            ht.Add("eid", 100);
+            ht.Add("ename", "Gopinadh");
+            ht.Add("job", "ceo");
+            ht.Add("eno", 9182719308);
+            ht.Add("email", "gopinadh622@gmail.com");
+            Console.WriteLine("STARTING");
+            Console.WriteLine(ht["email"]);
+            Console.WriteLine("BETWEEN");
+            foreach(object key in ht.Keys)
+                Console.WriteLine(key +" :" +ht[key]);
+            ht.Remove("email");
+            Console.WriteLine("after changing");
+            foreach (object key in ht.Keys)
+                Console.WriteLine(key + " :" + ht[key]);
+        }
+}
+}
+     <<<<<<<<<<--------------------------------------------------------->>>>>>>>>>>>
+     
+     
+using System;
+using System.Collections.Generic;
+namespace collections
+{
+    class program
+    {
+        static void Main()
+        {
+            List<int> li = new List<int>();
+            li.Add(1);li.Add(2);li.Add(3);li.Add(4);
+            Console.WriteLine("STARTING OF GENERIC");
+            for(int i =0; i < li.Count; i++)
+                Console.Write(li[i] +" ");
+            li.Insert(4, 100);li.Insert(0, 500);
+            Console.WriteLine("\n MIDDLE OF THE GENERIC");
+            for (int i = 0; i < li.Count; i++)
+                Console.Write(li[i] + " ");
+            li.RemoveAt(0);
+            Console.WriteLine("\n ending OF THE GENERIC");
+            foreach (int i in li)
+                Console.Write(i);
+            Console.ReadLine();
+
+        }
+    }
+}
