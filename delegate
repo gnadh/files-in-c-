@@ -1,0 +1,35 @@
+using System;
+
+namespace program_Delegate
+{
+    public delegate void AddDelegate(int x, int y);
+    public delegate string sayDelegate(string str);
+
+    class Program
+    {
+        public void Addnums(int a, int b)
+        {
+            Console.WriteLine(a + b);
+
+        }
+        public static string sayhello(string name)
+        {
+            return "hello" + name;
+        }
+        static void Main(string[] args)
+        {
+            Program p = new Program();
+            AddDelegate ad = new AddDelegate(p.Addnums);
+            ad(100, 5);
+            sayDelegate sd = new sayDelegate(Program.sayhello);
+            string str = sd("nani");
+            Console.WriteLine(str);
+
+            //p.Addnums(100, 5);
+            //string str = Program.sayhello("gopinadh");
+            //Console.WriteLine(str);
+            Console.ReadLine();
+
+        }
+    }
+}
