@@ -1,0 +1,50 @@
+using System;
+using System.Threading;
+
+namespace file_io
+{
+    class Program
+    {
+        static void Test1()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine("Test1:" + i);
+            }
+
+        }
+        static void Test2()
+        {
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine("Test2:" + i);
+
+
+                
+            }
+        }
+        static void Test3()
+        {
+            for (int i = 1; i <= 10; i++)
+                Console.WriteLine("Test3:" + i);
+        }
+        static void Test4()
+        {
+            for (int i = 1; i <= 20; i++)
+                Console.WriteLine("Test3:" + i);
+        }
+        static void Main(string[] args)
+        {
+            Thread T1 = new Thread(Test1);
+            Thread T2 = new Thread(Test2);
+            Thread T3 = new Thread(Test3);
+            Thread T4 = new Thread(Test4);
+            T1.Start();T2.Start();
+            T3.Start();T4.Start();
+
+
+            Console.ReadKey();
+        }
+
+    }
+}
