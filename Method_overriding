@@ -1,0 +1,35 @@
+using System;
+namespace method_overriding
+{
+    class parentclass
+    {
+        public void Show()
+        {
+            Console.WriteLine("parent show is called::)");
+        }
+        public virtual void Test()
+        {
+            Console.WriteLine("parent test is called::)");
+        }
+    }
+    class childclass:parentclass
+    {
+        public void Show(int i)
+        {
+            Console.WriteLine("child show is called::)");
+        }
+        public override void Test()
+        {
+            Console.WriteLine("child Test is called::)");
+        }
+        static void Main()
+        {
+            childclass c = new childclass();
+            c.Test();
+            c.Show(10);
+            c.Show();
+
+        }
+        
+    }
+}
