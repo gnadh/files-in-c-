@@ -1,0 +1,65 @@
+using System;
+using System.IO;
+
+namespace ConsoleApp14
+{
+    class Program
+    {
+        static void FI_Reader()
+        {
+            try
+            {
+                string path = "E:\\gopi.txt";
+                FileInfo fi = new FileInfo(path);
+                StreamReader sr = fi.OpenText();
+                string str = " ";
+                while((str = sr.ReadLine())!= null)
+                {
+                    Console.WriteLine(str);
+                }
+                
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+         }
+
+        
+               static void Main(string[] args)
+        {
+                FI_Reader();
+        }
+            
+        }
+        ----------------------------------------------------------------
+        using System;
+using System.IO;
+
+namespace ConsoleApp14
+{
+    class Program
+    {
+        static void FI_writer()
+        {
+            try
+            {
+                string path = "E:\\gopi.txt";
+                FileInfo fi = new FileInfo(path);
+                StreamWriter sw = fi.CreateText();
+                sw.WriteLine("hai this is  nani");
+                sw.close();  
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e);
+            }
+         }
+
+        
+               static void Main(string[] args)
+        {
+                FI_writer();
+        }
+            
+        }
