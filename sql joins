@@ -1,0 +1,12 @@
+create database nani;
+use nani;
+create table emp(emp_id int primary key ,emp_name varchar(20),emp_dept varchar(20),emp_email varchar(30),emp_salary int(30));
+describe emp;
+alter table emp drop column emp_dept;
+insert into emp values(101,"gopinadh","gopinadh6222gmail.com",600000),(102,"venkatesh","venkatesh44@gmail.com",70000),(103,"priti","priti222gmail.com",400000);
+select * from emp;
+create table dept(dept_id int,dept_name varchar(24));
+insert into dept values(101,"markting"),(102,"sales"),(103,"hr"),(104,"operter"),(105,"etc");
+select * from dept;
+
+select t1.emp_id, t1.emp_name,t1.emp_salary ,t2.dept_id,t2.dept_name from emp as t1 inner join dept as t2 on t1.emp_id =t2.dept_id;
